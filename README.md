@@ -34,6 +34,145 @@ let result = 0;
 
 
 </details>
+ <details>
+  <summary>Exclusive "or" (xor) Logical Operator</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function xor(a, b) {
+  return a != b;
+}
+```
+
+
+</details>
+<details>
+  <summary>Function 1 - hello world</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function greet(){
+  return "hello world!"
+}
+```
+
+
+</details>
+<details>
+  <summary>All Star Code Challenge #18</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function strCount(str, letter){  
+  let count = 0;
+  for(i = 0; i < str.length; i++){
+    if(str[i] == letter)
+      count ++;
+  }
+  return count;
+}
+```
+
+
+</details>
+<details>
+  <summary>Power</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function numberToPower(number, power){
+  let n = 1;
+  for(let i = 0; i < power; i++){
+   n *= number;
+  }
+  return n;
+}
+```
+
+
+</details>
+<details>
+  <summary>Counting sheep...</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function countSheeps(arrayOfSheep) {
+ let number = 0;
+  for(let i = 0; i < arrayOfSheep.length; i++){
+    if(arrayOfSheep[i] != null && arrayOfSheep[i] != false)
+      number ++;
+  }
+  return number;
+}
+```
+
+
+</details>
+<details>
+  <summary>String repeat</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function repeatStr (n, s) {
+  let str = "";
+  for(let i = 0; i < n; i++){
+    str += s;
+  }
+  return str;
+}
+```
+
+
+</details>
+<details>
+  <summary>Find out whether the shape is a cube</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+var cubeChecker = function(volume, side){
+  console.log(volume, side);
+  if(volume == Math.pow(side, 3) && side > 0)
+    return true;
+  else
+  return false;
+};
+```
+
+
+</details>
+<details>
+  <summary>Chuck Norris VII - True or False? (Beginner)</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function ifChuckSaysSo(){
+return 0>1;
+}
+```
+
+
+</details>
+<details>
+  <summary>DNA to RNA Conversion</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function DNAtoRNA(dna) {
+  let str = "";
+  for(let i = 0; i < dna.length; i++){
+    if(dna[i] != "T")
+    str += dna[i];
+    else
+      str += "U";
+  }
+  return str;
+}
+```
+
+
+</details>
+
+
 
 </details>
 <details>
@@ -118,13 +257,61 @@ function spongeMeme(sentence) {
 
 
 </details>
+<details>
+  <summary>Complementary DNA</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function DNAStrand(dna)
+{
+  const obj = { 
+    "A": "T", "T": "A", "C": "G", "G": "C"
+  }
+  let str = "";
+  for(let i = 0; i < dna.length; i++)
+  {
+    str += obj[dna[i]];
+  }
+  return str;
+}
+```
+
+
+</details>
 
 
 </details>
 <details>
   <summary>Kyu 6</summary>
 
-  Aqui poner los katas
+  <details>
+  <summary>Find the unique number</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function findUniq(arr) {
+  const counts = {};
+  
+  // Contar la cantidad de veces que aparece cada número
+  for(let i = 0; i < arr.length; i++) {
+    if(counts[arr[i]]) {
+      counts[arr[i]]++;
+    } else {
+      counts[arr[i]] = 1;
+    }
+  }
+  
+  // Buscar la clave con un valor de 1
+  for(const num in counts) {
+    if(counts[num] === 1) {
+      return Number(num);
+    }
+  }
+}
+```
+
+
+</details>
 
 </details>
 <details>
