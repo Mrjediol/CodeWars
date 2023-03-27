@@ -171,6 +171,157 @@ function DNAtoRNA(dna) {
 
 
 </details>
+<details>
+  <summary>Remove String Spaces</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function noSpace(x){
+  let str = "";
+  for (let i = 0; i < x.length; i++)
+  {  
+    if(x[i] != " ")
+      str += x[i];
+  }
+  return str;
+}
+```
+
+
+</details>
+<details>
+  <summary>Is your period late?</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function periodIsLate(last, today, cycleLength) {
+
+const diferenciaEnMilisegundos = today.getTime() - last.getTime();
+const diferenciaEnDias = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
+  
+  if(diferenciaEnDias > cycleLength)
+    {
+      return true;
+    }
+  else
+  return false;
+}
+```
+
+
+</details>
+<details>
+  <summary>Simple multiplication</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function simpleMultiplication(number) {
+  if(number % 2 == 0)
+    return number * 8;
+  else
+    return number * 9;
+}
+```
+
+
+</details>
+<details>
+  <summary>Determine offspring sex based on genes XX and XY chromosomes</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function chromosomeCheck(sperm) {
+  let result = "";
+  if(sperm == 'XX')
+    result += "Congratulations! You're going to have a daughter.";
+  if(sperm == 'XY')
+    result += "Congratulations! You're going to have a son.";
+  return result;
+}
+```
+
+
+</details>
+<details>
+  <summary>Count of positives / sum of negatives</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0) 
+    return [];
+     
+  let positiveCount = 0;
+  let negativeCount = 0; 
+  
+  for(let i = 0; i < input.length; i++)
+  {
+    if(input[i] > 0)
+    {
+      positiveCount += 1;
+    }
+    else if(input[i] < 0)
+    {
+      negativeCount += input[i];
+    }
+  }
+  return [positiveCount, negativeCount];
+}
+```
+
+
+</details>
+<details>
+  <summary>Count the number of cubes with paint on</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+var countSquares = function(cuts)
+{
+  if(cuts == 0)
+    return 1;
+  result = Math.pow((cuts + 1), 3) - Math.pow((cuts - 1), 3)
+  return  result;
+}
+```
+
+
+</details>
+<details>
+  <summary>Find Nearest square number</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function nearestSq(n){
+  if(Math.sqrt(n) % 1 == 0)
+  {
+    return n;
+  }
+  else
+  {
+    let number;
+    number = Math.sqrt(n);
+    
+    let firstDecimal = Number(number.toString().split('.')[1].charAt(0));
+    let result = 0;
+    
+    if (firstDecimal >= 5) 
+    {
+    result = (Math.floor(number) + 1) * (Math.floor(number) + 1);
+    }
+    else
+    {
+    result = Math.floor(number) * Math.floor(number);
+    } 
+    return result;
+  }
+  
+} 
+```
+
+
+</details>
+
 
 
 
@@ -278,6 +429,39 @@ function DNAStrand(dna)
 
 
 </details>
+<details>
+  <summary>Beginner Series #3 Sum of Numbers</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+  function GetSum( a,b )
+{
+   if (a == b) return a;
+   else if (a < b) return a + GetSum(a+1, b);
+   else return a + GetSum(a-1,b);
+}
+```
+
+
+</details>
+<details>
+  <summary>Regex validate PIN code</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+function validatePIN (pin) 
+{
+if (pin.length === 4 || pin.length === 6) {
+    if (/^\d+$/.test(pin)) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+
+</details>
 
 
 </details>
@@ -306,6 +490,62 @@ function findUniq(arr) {
     if(counts[num] === 1) {
       return Number(num);
     }
+  }
+}
+```
+
+
+</details>
+<details>
+  <summary>Replace With Alphabet Position</summary>
+<a href="https://imgur.com/7u20xV0"><img src="https://i.imgur.com/7u20xV0.png" title="source: imgur.com" /></a>
+
+```javascript
+public static class Kata
+{
+  public static string AlphabetPosition(string text)
+  {
+  string newStr = "";
+
+  for(int i = 0; i < text.Length; i++) {
+    char c = text[i];
+    if(c == 'a' || c == 'A')newStr += 1 + " ";
+    else if(c == 'b'|| c == 'B')newStr += 2 + " ";
+    else if(c == 'c'|| c == 'C')newStr += 3 + " ";
+    else if(c == 'd'|| c == 'D')newStr += 4 + " ";
+    else if(c == 'e'|| c == 'E')newStr += 5 + " ";
+    else if(c == 'f'|| c == 'F')newStr += 6 + " ";
+    else if(c == 'g'|| c == 'G')newStr += 7 + " ";
+    else if(c == 'h'|| c == 'H')newStr += 8 + " ";
+    else if(c == 'i'|| c == 'I')newStr += 9 + " ";
+    else if(c == 'j'|| c == 'J')newStr += 10 + " ";
+    else if(c == 'k'|| c == 'K')newStr += 11 + " ";
+    else if(c == 'l'|| c == 'L')newStr += 12 + " ";
+    else if(c == 'm'|| c == 'M')newStr += 13 + " ";
+    else if(c == 'n'|| c == 'N')newStr += 14 + " ";
+    else if(c == 'o'|| c == 'O')newStr += 15 + " ";
+    else if(c == 'p'|| c == 'P')newStr += 16 + " ";
+    else if(c == 'q'|| c == 'Q')newStr += 17 + " ";
+    else if(c == 'r'|| c == 'R')newStr += 18 + " ";
+    else if(c == 's'|| c == 'S')newStr += 19 + " ";
+    else if(c == 't'|| c == 'T')newStr += 20 + " ";
+    else if(c == 'u'|| c == 'U')newStr += 21 + " ";
+    else if(c == 'v'|| c == 'V')newStr += 22 + " ";
+    else if(c == 'w'|| c == 'W')newStr += 23 + " ";
+    else if(c == 'x'|| c == 'X')newStr += 24 + " ";
+    else if(c == 'y'|| c == 'Y')newStr += 25 + " ";
+    else if(c == 'z'|| c == 'Z')newStr += 26 + " ";
+     
+    
+  }
+    if(newStr.Length > 1)
+    {
+      
+    newStr = newStr.Substring(0, newStr.Length - 1);
+    return newStr;
+    }
+    else
+    return newStr;
   }
 }
 ```
