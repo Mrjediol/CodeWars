@@ -557,7 +557,38 @@ public static class Kata
 <details>
   <summary>Kyu 5</summary>
 
-  Aqui poner los katas
+  <details>
+  <summary>The Hashtag Generator</summary>
+<a href="https://imgur.com/aYMOqFF"><img src="https://i.imgur.com/aYMOqFF.png" title="source: imgur.com" /></a>
+
+```javascript
+function generateHashtag (str) {
+  if (str.trim().length === 0) {
+    return false;
+  }
+  
+  let result = "#";
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i - 1] === " " && str[i] !== " ") {
+      result += str[i].toUpperCase();
+    } else if (i === 0) {
+      result += str[i].toUpperCase();
+    } else if (str[i] !== " ") {
+      result += str[i];
+    }
+  }
+  if (result.length > 140) {
+    return false;
+  } else {
+    return result;
+  }
+}
+```
+
+
+</details>
+
 
 </details>
 <details>
